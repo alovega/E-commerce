@@ -5,7 +5,7 @@ Class for Item Administration
 import logging
 from django.db.models import F
 
-from ECommerce.orders.backend.services import ItemService
+from orders.backend.services import ItemService
 
 lgr = logging.getLogger(__name__)
 

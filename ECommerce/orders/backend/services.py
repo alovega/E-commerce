@@ -1,6 +1,6 @@
 from ..models import Order, Item
 
-from ECommerce.base.servicebase import ServiceBase
+from base.servicebase import ServiceBase
 
 
 class ItemService(ServiceBase):

@@ -1,15 +1,14 @@
 from __future__ import unicode_literals
 
 import logging
-import calendar
 
-from django.utils import timezone
+
 from django.http import JsonResponse
 
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 
-from ECommerce.base.utility import get_request_data
+from base.utility import get_request_data
 from .interfaces.item_interface import ItemAdministrator
 from .interfaces.order_interface import OrderAdministrator
 

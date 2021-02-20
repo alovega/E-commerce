@@ -1,6 +1,5 @@
 from django.conf.urls import url
 
-from . import views
 from .views import create_item, create_order, delete_item, delete_order, get_item, get_items, get_order, get_orders, \
 	update_item, \
 	update_order
