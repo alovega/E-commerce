@@ -49,7 +49,7 @@ def create_order(request):
 		data = get_request_data(request)
 		print(data)
 		order = OrderAdministrator.create_order(
-			quantity = data.get('quantity'), item_id = data.get('item_id'))
+			quantity = data.get('quantity'), item = data.get('item'))
 		return JsonResponse(order)
 	except Exception as ex:
 		lgr.exception('Order creation Exception: %s' % ex)
@@ -185,7 +185,7 @@ def delete_order(request):
 	try:
 		data = get_request_data(request)
 		print(data)
-		order = OrderAdministrator.delete_order(item = data.get('order'))
+		order = OrderAdministrator.delete_order(order = data.get('order'))
 		return JsonResponse(order)
 	except Exception as ex:
 		lgr.exception('Order deletion Exception: %s' % ex)

@@ -16,7 +16,7 @@ class ItemAdministrator(object):
 	"""
 
 	@staticmethod
-	def create_item(name, description, total, deficit, price, **kwargs):
+	def create_item(name, description, total, price, **kwargs):
 		"""
 		Creates an Item .
 		@param name: The name of the item you are creating
@@ -48,7 +48,7 @@ class ItemAdministrator(object):
 		return {"code": "400"}
 
 	@staticmethod
-	def update_item(item, name = None, description = None, total= None, price = None, **kwargs):
+	def update_item(item, name = None, description = None, deficit = None, total= None, price = None, **kwargs):
 		"""
 		Updates an Item .
 		@param item: The id of the item you are updating
@@ -61,6 +61,8 @@ class ItemAdministrator(object):
 		@type total: int/None
 		@param price: The cost of the item
 		@type price: int/None
+		@param deficit: The number o items credited
+		@type price: int/None
 		@param kwargs: Extra key-value arguments to pass for item update
 		@return: Response code dictionary to indicate if the item was updated or not
 		@rtype: dict
@@ -72,13 +74,32 @@ class ItemAdministrator(object):
 
 			name = name if name is not None else item.name
 			description = description if description is not None else item.description
-			total = total if total is not None else item.total
 			price = price if price is not None else item.price
+			if total:
+				deficit = item.deficit
+				if deficit > 0:
+					if int(total) > deficit or int(total) == deficit:
+						total = int(total) - deficit
+						deficit = 0
+					elif deficit > int(total):
+						print('here')
+						deficit = deficit - int(total)
+						total = 0
+						print(deficit)
+				elif deficit == 0:
+					total = int(total) - int(deficit)
+					deficit = 0
+				else:
+					total = int(total)
+
+			else:
+				deficit = deficit if deficit is not None else item.deficit
 			updated_item = ItemService().update(
-				pk = item.id, name = name, description = description, total = total, price = price)
+				pk = item.id, name = name, description = description, total = total, price = price,
+				deficit = deficit
+			)
 			if updated_item:
-				updated_item = ItemService().filter(pk = item.id).values(
-					'id', 'name', 'price', 'total', 'description', 'deficit', 'date_created', 'date_modified').first()
+				updated_item = ItemService().filter(pk = item.id).values().first()
 				return {'code': '200', 'data': updated_item}
 		except Exception as ex:
 			lgr.exception("Item Update exception %s" % ex)
@@ -96,8 +117,7 @@ class ItemAdministrator(object):
 		"""
 		try:
 			if item:
-				item = ItemService().filter(pk=item).values(
-					'id', 'name', 'description', 'price','total', 'deficit', 'date_created', 'date_modified').first()
+				item = ItemService().filter(pk=item).values().first()
 			if item is None:
 				return {"code": "400", 'message': 'item requested does not exist'}
 			return {'code': '200', 'data': item}
@@ -114,7 +134,7 @@ class ItemAdministrator(object):
 		@rtype: dict
 		"""
 		try:
-			items = list(ItemService().filter().values().first())
+			items = list(ItemService().filter().values())
 			if items is None:
 				return {"code": "400", 'message':'error while trying to fetch all items'}
 			return {'code': '200', 'data': items}

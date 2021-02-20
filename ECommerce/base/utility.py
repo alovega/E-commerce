@@ -20,7 +20,7 @@ def get_request_data(request):
 			request_method = getattr(request, 'method', None)
 			if str(request_meta.get('CONTENT_TYPE', '')).startswith('multipart/form-data;'):  # Special handling for
 				# Form Data?
-				data = request.POST.copy()
+				data = request.POST.copy() if request.POST.copy() else request.GET.copy()
 				data = data.dict()
 			elif request_method == 'GET':
 				data = request.GET.copy()
