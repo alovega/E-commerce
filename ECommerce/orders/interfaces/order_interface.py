@@ -1,10 +1,11 @@
 """
 Class for Orders Administration
 """
+
 import logging
 from django.db.models import F
 
-from ..backend.services import OrderService, ItemService
+from ECommerce.orders.backend.services import OrderService, ItemService
 
 lgr = logging.getLogger(__name__)
 
@@ -17,12 +18,12 @@ class OrderAdministrator(object):
 	@staticmethod
 	def create_order(quantity, item_id, **kwargs):
 		"""
-		Creates an escalation rule for a selected system.
+		Creates an order.
 		@param quantity: The quantity of the order you are making
 		@type quantity: int
 		@param item_id: The id of the item you are ordering
 		@type item_id: str/None
-		@param kwargs: Extra key-value arguments to pass for incident logging
+		@param kwargs: Extra key-value arguments to pass for order creation
 		@return: Response code dictionary to indicate if the order was created or not
 		@rtype: dict
 		"""
@@ -52,7 +53,7 @@ class OrderAdministrator(object):
 		@type quantity: int | None
 		@param item_id: id of the item you are ordering
 		@type item_id: str | None
-		@param kwargs: Extra key-value arguments to pass for incident logging
+		@param kwargs: Extra key-value arguments to pass for order update
 		@return: Response code dictionary to indicate if the order was updated or not
 		@rtype: dict
 		"""
@@ -86,7 +87,7 @@ class OrderAdministrator(object):
 		Retrieves an order.
 		@param order: Id of the order to be retrieved
 		@type order: str | None
-		@param kwargs: Extra key-value arguments to pass for incident logging
+		@param kwargs: Extra key-value arguments to pass for order filtering
 		@return: Response code dictionary to indicate if the order was retrieved or not
 		@rtype: dict
 		"""
@@ -105,7 +106,7 @@ class OrderAdministrator(object):
 	def get_orders(**kwargs):
 		"""
 		Retrieves all created Orders.
-		@param kwargs: Extra key-value arguments to pass for incident logging
+		@param kwargs: Extra key-value arguments to pass for order filtering
 		@return: Response code dictionary to indicate if the orders were retrieved or not
 		@rtype: dict
 		"""
@@ -113,14 +114,14 @@ class OrderAdministrator(object):
 			orders = list(OrderService().filter().values(
 				'id', 'quantity', 'amount', 'date_created', 'date_modified', item = F('item__name')).first())
 			if orders is None:
-				return {"code": "400", 'message':'error while try to fetch all orders'}
+				return {"code": "400", 'message':'error while trying to fetch all orders'}
 			return {'code': '200', 'data': orders}
 		except Exception as ex:
-			lgr.exception("Get systems exception %s" % ex)
+			lgr.exception("Get orders exception %s" % ex)
 		return {"code": "400"}
 
 	@staticmethod
-	def delete_system(order, **kwargs):
+	def delete_order(order, **kwargs):
 		"""
 		Deletes an order.
 		@param order: order to be deleted
