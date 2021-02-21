@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
     'orders'
 ]
 
@@ -123,6 +124,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 VENV_ROOT = '/opt/logs/helamonitor/'
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 
 LOGGING = {
