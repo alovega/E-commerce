@@ -75,28 +75,9 @@ class ItemAdministrator(object):
 			name = name if name is not None else item.name
 			description = description if description is not None else item.description
 			price = price if price is not None else item.price
-			if total:
-				deficit = item.deficit
-				if deficit > 0:
-					if int(total) > deficit or int(total) == deficit:
-						total = int(total) - deficit
-						deficit = 0
-					elif deficit > int(total):
-						print('here')
-						deficit = deficit - int(total)
-						total = 0
-						print(deficit)
-				elif deficit == 0:
-					total = int(total) - int(deficit)
-					deficit = 0
-				else:
-					total = int(total)
-
-			else:
-				deficit = deficit if deficit is not None else item.deficit
+			total = total if total is  not  None else item.total
 			updated_item = ItemService().update(
 				pk = item.id, name = name, description = description, total = total, price = price,
-				deficit = deficit
 			)
 			if updated_item:
 				updated_item = ItemService().filter(pk = item.id).values().first()

@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
-    'orders'
+    'orders',
+    'oidc_provider'
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,9 @@ STATIC_URL = '/static/'
 VENV_ROOT = '/opt/logs/helamonitor/'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+LOGIN_URL = '/accounts/login/'
+OIDC_USERINFO = 'ECommerce.oidc_provider_settings.userinfo'
+OIDC_GRANT_TYPE_PASSWORD_ENABLE = True
 
 
 LOGGING = {

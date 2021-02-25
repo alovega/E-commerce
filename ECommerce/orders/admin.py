@@ -21,6 +21,6 @@ class ItemAdmin(admin.ModelAdmin):
 	Admin for custom user model
 	"""
 	list_filter = ('date_created', 'date_modified')
-	list_display = ('id', 'name', 'total', 'deficit', 'price', 'date_created', 'date_modified')
+	list_display = ('id', 'name', 'total', 'price', 'date_created', 'date_modified')
 	ordering = ('-date_created',)
 	search_fields = ('name', 'price')

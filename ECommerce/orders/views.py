@@ -2,21 +2,23 @@ from __future__ import unicode_literals
 
 import logging
 
-
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
+from oidc_provider.lib.utils.oauth2 import protected_resource_view
 
 from base.utility import get_request_data
-from .interfaces.item_interface import ItemAdministrator
-from .interfaces.order_interface import OrderAdministrator
+from orders.backend.interfaces.item_interface import ItemAdministrator
+from orders.backend.interfaces.order_interface import OrderAdministrator
 
 lgr = logging.getLogger(__name__)
 
 
 @csrf_exempt
-def create_item(request):
+@protected_resource_view(['openid'])
+def create_item(request, **kwargs):
 	"""
 	Creates item from users
 	@param request: The Django WSGI Request to process
@@ -27,6 +29,7 @@ def create_item(request):
 	try:
 		data = get_request_data(request)
 		print(data)
+		print(request)
 		item = ItemAdministrator.create_item(
 			name = data.get('name'), description = data.get('description'), total = data.get('total'),
 			price = data.get('price'))
@@ -37,7 +40,8 @@ def create_item(request):
 
 
 @csrf_exempt
-def create_order(request):
+@protected_resource_view(['openid'])
+def create_order(request, **kwargs):
 	"""
 	Creates order from users
 	@param request: The Django WSGI Request to process
@@ -47,9 +51,8 @@ def create_order(request):
 	"""
 	try:
 		data = get_request_data(request)
-		print(data)
 		order = OrderAdministrator.create_order(
-			quantity = data.get('quantity'), item = data.get('item'))
+			quantity = data.get('quantity'), item = data.get('item'), **kwargs)
 		return JsonResponse(order)
 	except Exception as ex:
 		lgr.exception('Order creation Exception: %s' % ex)
@@ -57,7 +60,8 @@ def create_order(request):
 
 
 @csrf_exempt
-def update_item(request):
+@protected_resource_view(['openid'])
+def update_item(request, **kwargs):
 	"""
 	Updates item from users
 	@param request: The Django WSGI Request to process
@@ -70,7 +74,7 @@ def update_item(request):
 		print(data)
 		item = ItemAdministrator.update_item(
 			item = data.get('item'), name = data.get('name'), description = data.get('description'),
-			total = data.get('total'), price = data.get('price'))
+			total = data.get('total'), price = data.get('price'), **kwargs)
 		return JsonResponse(item)
 	except Exception as ex:
 		lgr.exception('Item update Exception: %s' % ex)
@@ -78,7 +82,8 @@ def update_item(request):
 
 
 @csrf_exempt
-def update_order(request):
+@protected_resource_view(['openid'])
+def update_order(request, **kwargs):
 	"""
 	Updates order from users
 	@param request: The Django WSGI Request to process
@@ -90,7 +95,7 @@ def update_order(request):
 		data = get_request_data(request)
 		print(data)
 		order = OrderAdministrator.update_order(
-			order= data.get('order'), quantity = data.get('quantity'), item_id = data.get('item_id'))
+			order= data.get('order'), quantity = data.get('quantity'), item = data.get('item'), **kwargs)
 		return JsonResponse(order)
 	except Exception as ex:
 		lgr.exception('Order update Exception: %s' % ex)
@@ -98,7 +103,8 @@ def update_order(request):
 
 
 @csrf_exempt
-def get_order(request):
+@protected_resource_view(['openid'])
+def get_order(request, **kwargs):
 	"""
 	Retrieves order requested from users
 	@param request: The Django WSGI Request to process
@@ -109,7 +115,7 @@ def get_order(request):
 	try:
 		data = get_request_data(request)
 		print(data)
-		order = OrderAdministrator.get_order(order = data.get('order'))
+		order = OrderAdministrator.get_order(order = data.get('order'), **kwargs)
 		return JsonResponse(order)
 	except Exception as ex:
 		lgr.exception('Order fetching Exception: %s' % ex)
@@ -117,7 +123,8 @@ def get_order(request):
 
 
 @csrf_exempt
-def get_item(request):
+@protected_resource_view(['openid'])
+def get_item(request, **kwargs):
 	"""
 	retrieves item requested by users
 	@param request: The Django WSGI Request to process
@@ -128,7 +135,7 @@ def get_item(request):
 	try:
 		data = get_request_data(request)
 		print(data)
-		item = ItemAdministrator.get_item(item = data.get('item'))
+		item = ItemAdministrator.get_item(item = data.get('item'), **kwargs)
 		return JsonResponse(item)
 	except Exception as ex:
 		lgr.exception('Item fetching Exception: %s' % ex)
@@ -136,7 +143,8 @@ def get_item(request):
 
 
 @csrf_exempt
-def get_items(request):
+@protected_resource_view(['openid'])
+def get_items(request, **kwargs):
 	"""
 	retrieves all item requested by users
 	@param request: The Django WSGI Request to process
@@ -147,7 +155,7 @@ def get_items(request):
 	try:
 		data = get_request_data(request)
 		print(data)
-		items = ItemAdministrator.get_items()
+		items = ItemAdministrator.get_items(**kwargs)
 		return JsonResponse(items)
 	except Exception as ex:
 		lgr.exception('Items fetching Exception: %s' % ex)
@@ -155,7 +163,8 @@ def get_items(request):
 
 
 @csrf_exempt
-def get_orders(request):
+@protected_resource_view(['openid'])
+def get_orders(request, **kwargs):
 	"""
 	Retrieves all orders requested from users
 	@param request: The Django WSGI Request to process
@@ -166,7 +175,7 @@ def get_orders(request):
 	try:
 		data = get_request_data(request)
 		print(data)
-		orders = OrderAdministrator.get_orders()
+		orders = OrderAdministrator.get_orders(**kwargs)
 		return JsonResponse(orders)
 	except Exception as ex:
 		lgr.exception('Orders fetching Exception: %s' % ex)
@@ -174,7 +183,8 @@ def get_orders(request):
 
 
 @csrf_exempt
-def delete_order(request):
+@protected_resource_view(['openid'])
+def delete_order(request, **kwargs):
 	"""
 	delete an  order requested by users
 	@param request: The Django WSGI Request to process
@@ -185,7 +195,7 @@ def delete_order(request):
 	try:
 		data = get_request_data(request)
 		print(data)
-		order = OrderAdministrator.delete_order(order = data.get('order'))
+		order = OrderAdministrator.delete_order(order = data.get('order'), **kwargs)
 		return JsonResponse(order)
 	except Exception as ex:
 		lgr.exception('Order deletion Exception: %s' % ex)
@@ -193,7 +203,8 @@ def delete_order(request):
 
 
 @csrf_exempt
-def delete_item(request):
+@protected_resource_view(['openid'])
+def delete_item(request, **kwargs):
 	"""
 	delete item requested by users
 	@param request: The Django WSGI Request to process
@@ -204,7 +215,7 @@ def delete_item(request):
 	try:
 		data = get_request_data(request)
 		print(data)
-		item = ItemAdministrator.delete_item(item = data.get('item'))
+		item = ItemAdministrator.delete_item(item = data.get('item'), **kwargs)
 		return JsonResponse(item)
 	except Exception as ex:
 		lgr.exception('Item deletion Exception: %s' % ex)

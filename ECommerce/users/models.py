@@ -2,14 +2,16 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import ugettext_lazy as _
 
-from .manager import CustomUserManager
-
 
 class CustomUser(AbstractUser):
-	phone_number = models.CharField(max_length=100, null = True, help_text = "Mobile/phone number of the user")
-	code = models.CharField(max_length=100, null = True, help_text = "code of the user")
+	"""
+	Model for managing system users
+	"""
+	phone_number = models.CharField(max_length=15, null=True, blank=True)
 
-	objects = CustomUserManager()
+	# deleted = models.BooleanField(default = False)
 
-	def __str__(self):
-		return self.email
+	class Meta:
+		db_table = 'auth_user'
+		ordering = ('username',)
+		unique_together = ('username',)
