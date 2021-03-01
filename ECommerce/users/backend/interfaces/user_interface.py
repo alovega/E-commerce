@@ -11,7 +11,7 @@ import logging
 import dateutil.parser
 from users.models import CustomUser
 from django.db.models import F, Q
-from oidc_provider.models import Client, ResponseType
+from users.backend.services import CustomUserService
 
 lgr = logging.getLogger(__name__)
 
@@ -42,11 +42,15 @@ class UserAdministrator(object):
 		@rtype: dict
 		"""
 		try:
-			if CustomUser.objects.filter(username = username).exists():
+			if CustomUserService.filter(username = username).exists():
 				return {"code": "400", 'message': 'Username already in use'}
-			if CustomUser.objects.filter(email = email).exists():
+			if CustomUserService.filter(email = email).exists():
 				return {"code": "400", 'message': 'Email already in use'}
-			CustomUser.objects.create_user(
+			if '0' == phone_number[0]:
+				phone_number[0] = '+254'
+				print(phone_number)
+
+			CustomUserService.create(
 				username, email, password, first_name = first_name, last_name = last_name, phone_number = phone_number)
 			return {"code": "200", 'message': 'user successfully registered'}
 		except Exception as ex:
