@@ -20,7 +20,7 @@ class Item(models.Model):
 
 class Order(models.Model):
 	quantity = models.IntegerField(null=True, help_text="Please input only numbers character type.")
-	customer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE, blank = True, null = True,)
+	customer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE, blank = True, null = True)
 	amount = models.IntegerField(null=True, help_text="Please input only numbers character type.")
 	date_created = models.DateTimeField(auto_now_add=True)
 	date_modified = models.DateTimeField(auto_now = True)

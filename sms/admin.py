@@ -34,6 +34,6 @@ class DeliveryReportAdmin(admin.ModelAdmin):
 	Admin for custom user model
 	"""
 	list_filter = ('date_created', 'date_modified', 'status')
-	list_display = ('id', 'identifier', 'status', 'networkCode', 'date_created', 'date_modified')
+	list_display = ('id', 'identifier', 'status', 'network_code', 'date_created', 'date_modified')
 	ordering = ('-date_created',)
-	search_fields = ('status', 'identifier', 'networkCode')
+	search_fields = ('status', 'identifier', 'network_code')

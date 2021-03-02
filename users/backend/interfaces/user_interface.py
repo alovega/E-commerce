@@ -22,7 +22,7 @@ class UserAdministrator(object):
 	"""
 
 	@staticmethod
-	def create_user(username, password, email, first_name=None, last_name=None, phone_number=None, **kwargs):
+	def create_user(username, password, email, first_name = None, last_name = None, phone_number = None, **kwargs):
 		"""
 		Creates a user.
 		@param username: Username of the user to be created
@@ -42,17 +42,47 @@ class UserAdministrator(object):
 		@rtype: dict
 		"""
 		try:
-			if CustomUserService.filter(username = username).exists():
+			if CustomUserService().filter(username = username).exists():
 				return {"code": "400", 'message': 'Username already in use'}
-			if CustomUserService.filter(email = email).exists():
+			if CustomUserService().filter(email = email).exists():
 				return {"code": "400", 'message': 'Email already in use'}
-			if '0' == phone_number[0]:
-				phone_number[0] = '+254'
-				print(phone_number)
-
-			CustomUserService.create(
-				username, email, password, first_name = first_name, last_name = last_name, phone_number = phone_number)
+			if phone_number:  # ensure the user has given the required phone number
+				a = len(phone_number) - 9
+				new_mobile = phone_number[-1:a - 1:-1][::-1]
+				if "+254" != phone_number.split(new_mobile)[0]:
+					print(phone_number.split(new_mobile)[0])
+					if len(phone_number.split(new_mobile)[0]) == 1:
+						mobile_number = '+254' + new_mobile
+					else:
+						return 'Wrong phone number given'
+				else:
+					mobile_number = phone_number
+			CustomUserService().create(
+				username, email, password, first_name = first_name, last_name = last_name, phone_number = mobile_number)
 			return {"code": "200", 'message': 'user successfully registered'}
 		except Exception as ex:
 			lgr.exception("UserCreation exception %s" % ex)
 		return {"code": "400", 'message': 'User could not be created'}
+
+	@staticmethod
+	def get_user(user, **kwargs):
+		"""
+		Retrieves an order.
+		@param order: Id of the order to be retrieved
+		@type order: str | None
+		@param kwargs: Extra key-value arguments to pass for order filtering
+		@return: Response code dictionary to indicate if the order was retrieved or not
+		@rtype: dict
+		"""
+		try:
+			if user:  # fetch a user whom is a customer
+				customer = CustomUserService().filter(
+					pk = user).values().first()
+			if customer is None:
+				return {"code": "400", 'message': 'user requested does not exist'}
+			return {'code': '200', 'data': user}
+		except Exception as ex:
+			lgr.exception("Get user exception %s" % ex)
+		return {"code": "400"}
+
+

@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('orders/', include('orders.urls')),
     path('users/', include('users.urls')),
+    path('sms/', include('sms.urls')),
     url(r'^openid/', include('oidc_provider.urls', namespace='oidc_provider')),
 ]

@@ -54,10 +54,10 @@ class Outbox(models.Model):
 
 class DeliveryReport(models.Model):
 	identifier = models.CharField(max_length=100)
-	phoneNumber = models.CharField(max_length=15)
-	retryCount = models.IntegerField()
+	phone_number = models.CharField(max_length=15)
+	retry_count = models.IntegerField()
 	status = models.CharField(max_length=10, blank=True, null=True)
-	networkCode = models.IntegerField()
+	network_code = models.IntegerField()
 	date_created = models.DateTimeField(auto_now_add=True)
 	date_modified = models.DateTimeField(auto_now = True)
 
@@ -67,7 +67,7 @@ class DeliveryReport(models.Model):
 		verbose_name_plural = "Delivery Reports"
 
 	def __str__(self):
-		return '{0}-{1}-{2}'.format(self.identifier, self.phoneNumber, self.status)  # noqa: E501
+		return '{0}-{1}-{2}'.format(self.identifier, self.phone_number, self.status)  # noqa: E501
 
 
 class Inbox(models.Model):
@@ -76,7 +76,7 @@ class Inbox(models.Model):
 	phone = models.CharField(max_length=15)
 	to = models.IntegerField()
 	linkId = models.CharField(max_length=100)
-	date_created = models.DateTimeField(auto_now_add=True)
+	date_created = models.DateTimeField(null=True, blank=True)
 	date_modified = models.DateTimeField(auto_now = True)
 
 	class Meta:

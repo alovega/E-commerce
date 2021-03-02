@@ -7,7 +7,8 @@ from django.db.models import F
 
 from orders.backend.services import OrderService, ItemService
 from orders.backend.interfaces.item_interface import ItemAdministrator
-from oidc_provider.models import Token
+from sms.backend.interfaces.outbox_interface import OutboxAdministrator
+from users.backend.services import CustomUserService
 
 from users.models import CustomUser
 
@@ -52,10 +53,21 @@ class OrderAdministrator(object):
 			if order:
 				# if creation successful update item total
 				ItemAdministrator.update_item(item = item.id, total = (int(item.total) - int(quantity)))
-				order = OrderService().filter(pk = order.id).values(
+				created_order = OrderService().filter(pk = order.id).values(
 					'amount', 'id', 'quantity', 'date_created', 'date_modified',
 					item_name = F('item__name'), owner = F('customer__username')).first()
-				return {"code": "200", 'data': order}
+				print(created_order)
+				# message to be sent to the user
+				message = "Your order for item: %s, quantity: %s, amount: %s has been created please be patient" %(
+					created_order.get('item_name'), created_order.get('quantity'), created_order.get('amount'))
+				# create and send a message to a user
+				message = OutboxAdministrator.create_outbox(
+					phone_number = CustomUserService().get(pk = kwargs.get('token').user_id).phone_number,
+					message = message
+				)
+				if message.get('code') != '200':
+					lgr.exception("Message Creation exception %s" % message.get('code'))
+				return {"code": "200", 'data': created_order}
 		except Exception as ex:
 			lgr.exception("Order creation exception %s" % ex)
 		return {"code": "400"}
@@ -142,7 +154,7 @@ class OrderAdministrator(object):
 		try:
 			if order:  # ensure a customer is only getting an order tied to him
 				order = OrderService().filter(
-					pk = order, customer = CustomUser.objects.get(pk = kwargs.get('token').user_id)).values(
+					pk = order, customer = CustomUserService().get(pk = kwargs.get('token').user_id)).values(
 					'id', 'quantity', 'amount', 'date_created', 'date_modified', item_name = F('item__name')
 				).first()
 			if order is None:
