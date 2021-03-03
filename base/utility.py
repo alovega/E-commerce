@@ -1,6 +1,5 @@
 import json
 import logging
-import base64
 
 lgr = logging.getLogger(__name__)
 

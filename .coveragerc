@@ -2,4 +2,14 @@
 omit =
         *venv/*
         *env/*
-        *migrations/*
+        sms/migrations/*
+        orders/migrations/*
+        users/migrations/*
+        sms/app.py
+        orders/app.py
+        users/app.py
+        ECommerce/asgi.py
+        ECommerce/oidc_provider_settings.py
+        ECommerce/wsgi.py
+        manage.py
+

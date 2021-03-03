@@ -1,0 +1,26 @@
+[
+  {
+    "model": "users.CustomUser",
+    "pk": 1,
+    "fields": {
+      "first_name": "Github",
+      "last_name": "User",
+      "password": "pass1234",
+      "email": "user@example.com",
+      "username": "github",
+      "phone_number": "071234567"
+    }
+  },
+  {
+    "model": "orders.Item",
+    "pk": 1,
+    "fields": {
+      "name": "Joy Stick",
+      "description": "A pair of simple gaming pad to be used by pc gamers",
+      "total": "200",
+      "price": "1000",
+      "date_created": "2020-01-31 12:00",
+      "date_modified": "2020-01-31 12:00"
+    }
+  }
+]
