@@ -1,5 +1,5 @@
-#ECommerce App
-a simple app that manages customers orders and notifications
+# ECommerce App
+ a simple app that manages customers orders and notifications
 
 
 ## Table of contents
@@ -91,10 +91,17 @@ after creating a super user and running the server login to the admin and create
  
  ![client2](./image/client2.png)
  
+ 
  on Authenticate User endpoint in the collection change the
  * client_id: to your generated client id
  
  call the endpoint and update all the other endpoint access token to your access_token returned in the response
  
+ 
+ ## Built with 
+    Django, a python framework
+    
+ ## Authors
+ [Alwavega Kevin](https://github.com/alovega)
  
 
