@@ -1,5 +1,6 @@
-venv/
+../venv/
 __pycache__/
+.pytest_cache/
 htmlcov/
 .tox/
 .nox/
@@ -10,7 +11,10 @@ htmlcov/
 *.pot
 *.pyc
 __pycache__/
+migrations/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 .idea/
+venv/
+.pytest_cache/
