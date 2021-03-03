@@ -26,31 +26,6 @@ class Outbox(models.Model):
 	def __str__(self):
 		return '{0}-{1}-{2}'.format(self.messageId, self.status, self.text[:10])  # noqa: E501
 
-	@staticmethod
-	def send(phone_number, message):
-		"""
-
-		"""
-		url = settings.AT_ENDPOINT_URL
-		headers = {'ApiKey': settings.AT_API_KEY,
-			'Content-Type': 'application/x-www-form-urlencoded',
-			'Accept': 'application/json'}
-		body = {'username': settings.AT_USER_NAME,
-			'from': settings.AT_FROM_VALUE,
-			'message': message,
-			'to': phone_number}
-		response = requests.post(url=url, headers=headers, data=body)
-		print(response.__dict__)
-		data = response.json().get('SMSMessageData').get('Recipients')[0]
-		Outbox_object = Outbox(
-			status=data['status'],
-			statusCode=data['statusCode'],
-			phone=data['number'],
-			text=message,
-			messageId=data['messageId']
-		)
-		Outbox_object.save()
-
 
 class DeliveryReport(models.Model):
 	identifier = models.CharField(max_length=100)
