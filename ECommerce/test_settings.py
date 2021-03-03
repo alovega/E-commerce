@@ -1,7 +1,6 @@
 """
-The test settings for Helamonitor.
+The test settings for ECommerce.
 """
-import os
 
 from .settings import *
 
@@ -11,9 +10,9 @@ from .settings import *
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql',
-		'USER': 'postgres',
-		'PASSWORD':'LUG4Z1V4',
-		'NAME': 'test_e_commerce',
+		'USER': config('DATABASE_USER'),
+		'PASSWORD': config('DATABASE_PASSWORD'),
+		'NAME': config('DATABASE_TEST')
 	}
 }
 EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
