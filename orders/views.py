@@ -27,8 +27,6 @@ def create_item(request, **kwargs):
 	"""
 	try:
 		data = get_request_data(request)
-		print(data)
-		print(request)
 		item = ItemAdministrator.create_item(
 			name = data.get('name'), description = data.get('description'), total = data.get('total'),
 			price = data.get('price'))
@@ -70,7 +68,6 @@ def update_item(request, **kwargs):
 	"""
 	try:
 		data = get_request_data(request)
-		print(data)
 		item = ItemAdministrator.update_item(
 			item = data.get('item'), name = data.get('name'), description = data.get('description'),
 			total = data.get('total'), price = data.get('price'), **kwargs)

@@ -135,9 +135,9 @@ class ItemAdministrator(object):
 		try:
 			item = ItemService().filter(pk = item).first()
 			if item is None:
-				return {"code": "800.400.002", 'message': "no existing item"}
+				return {"code": "400", 'message': "no existing item"}
 			if item.delete():
-				return {'code': '800.200.001', 'Message': 'item deleted successfully'}
+				return {'code': '200', 'Message': 'item deleted successfully'}
 		except Exception as ex:
 			lgr.exception("Delete item exception %s" % ex)
 		return {"code": "400"}

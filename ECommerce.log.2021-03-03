@@ -1,0 +1,1131 @@
+2021-03-03 13:04:19,813-base.servicebase servicebase 14108 18208-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:06:13,494-base.servicebase servicebase 15836 3516-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:07:15,070-base.servicebase servicebase 15708 14988-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:07:15,089-base.servicebase servicebase 15708 14988-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:08:27,730-base.servicebase servicebase 11716 5040-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:08:27,749-base.servicebase servicebase 11716 5040-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:10:46,321-base.servicebase servicebase 19396 15120-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:10:46,339-base.servicebase servicebase 19396 15120-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:12:46,953-base.servicebase servicebase 15440 16148-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:12:46,971-base.servicebase servicebase 15440 16148-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:12:49,281-base.servicebase servicebase 15440 16148-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:12:49.247179+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:12:49.247179+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 97, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:12:49.247179+00).
+
+2021-03-03 13:14:33,268-base.servicebase servicebase 15352 3516-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:14:33,287-base.servicebase servicebase 15352 3516-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:14:35,761-base.servicebase servicebase 15352 3516-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:14:35.757975+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:14:35.757975+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 97, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:14:35.757975+00).
+
+2021-03-03 13:15:27,548-base.servicebase servicebase 2372 2188-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:15:27,566-base.servicebase servicebase 2372 2188-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:15:29,301-base.servicebase servicebase 2372 2188-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:15:29.298558+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:15:29.298558+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 97, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:15:29.298558+00).
+
+2021-03-03 13:17:13,810-base.servicebase servicebase 2104 6688-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:17:13,830-base.servicebase servicebase 2104 6688-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:17:16,834-base.servicebase servicebase 2104 6688-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:17:16.830986+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:17:16.830986+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 97, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:17:16.830986+00).
+
+2021-03-03 13:17:59,935-base.servicebase servicebase 8928 16288-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:17:59,956-base.servicebase servicebase 8928 16288-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:18:02,068-base.servicebase servicebase 8928 16288-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:18:02.065956+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:18:02.065956+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 97, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:18:02.065956+00).
+
+2021-03-03 13:19:20,104-base.servicebase servicebase 6644 1564-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:19:20,122-base.servicebase servicebase 6644 1564-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:19:22,142-base.servicebase servicebase 6644 1564-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:19:22.139891+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:19:22.139891+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 97, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:19:22.139891+00).
+
+2021-03-03 13:19:22,165-base.servicebase servicebase 6644 1564-(MainThread) ERROR-InboxService update exception: value too long for type character varying(15)
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(15)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 114, in update
+    record.save(using=self.using)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 850, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 900, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 760, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1426, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: value too long for type character varying(15)
+
+2021-03-03 13:22:18,054-base.servicebase servicebase 10276 13376-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 63, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:22:18,073-base.servicebase servicebase 10276 13376-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 80, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:22:20,101-base.servicebase servicebase 10276 13376-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:22:20.096861+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:22:20.096861+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 97, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:22:20.096861+00).
+
+2021-03-03 13:22:20,145-base.servicebase servicebase 10276 13376-(MainThread) ERROR-InboxService update exception: value too long for type character varying(15)
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(15)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 114, in update
+    record.save(using=self.using)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 850, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 900, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 760, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1426, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: value too long for type character varying(15)
+
+2021-03-03 13:35:07,156-base.servicebase servicebase 14488 11692-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 64, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:35:07,180-base.servicebase servicebase 14488 11692-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 81, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:35:09,269-base.servicebase servicebase 14488 11692-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:35:09.26593+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:35:09.26593+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 98, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:35:09.26593+00).
+
+2021-03-03 13:35:09,304-base.servicebase servicebase 14488 11692-(MainThread) ERROR-InboxService update exception: value too long for type character varying(15)
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(15)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 115, in update
+    record.save(using=self.using)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 850, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 900, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 760, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1426, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: value too long for type character varying(15)
+
+2021-03-03 13:37:02,161-base.servicebase servicebase 16224 11300-(MainThread) ERROR-OutboxService get exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 64, in get
+    return self.manager.get(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:37:02,186-base.servicebase servicebase 16224 11300-(MainThread) ERROR-OutboxService filter exception: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 81, in filter
+    return self.manager.filter(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Python39\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'simple' into field. Choices are: date_created, date_modified, id, messageId, phone, status, statusCode, text
+2021-03-03 13:37:03,969-base.servicebase servicebase 16224 11300-(MainThread) ERROR-InboxService create exception: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:37:03.964341+00).
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:37:03.964341+00).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 98, in create
+    return self.manager.create(**kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 907, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Python39\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1332, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "to" of relation "sms_inbox" violates not-null constraint
+DETAIL:  Failing row contains (6, , , null, , null, 2021-03-03 10:37:03.964341+00).
+
+2021-03-03 13:37:04,015-base.servicebase servicebase 16224 11300-(MainThread) ERROR-InboxService update exception: value too long for type character varying(15)
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(15)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alovega\PycharmProjects\E-commerce\base\servicebase.py", line 115, in update
+    record.save(using=self.using)
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 740, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 777, in save_base
+    updated = self._save_table(
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 850, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "C:\Python39\lib\site-packages\django\db\models\base.py", line 900, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Python39\lib\site-packages\django\db\models\query.py", line 760, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1426, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python39\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: value too long for type character varying(15)
+
