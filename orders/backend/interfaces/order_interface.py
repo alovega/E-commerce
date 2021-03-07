@@ -56,7 +56,6 @@ class OrderAdministrator(object):
 				created_order = OrderService().filter(pk = order.id).values(
 					'amount', 'id', 'quantity', 'date_created', 'date_modified',
 					item_name = F('item__name'), owner = F('customer__username')).first()
-				print(created_order)
 				# message to be sent to the user
 				message = "Your order for item: %s, quantity: %s, amount: %s has been created please be patient" %(
 					created_order.get('item_name'), created_order.get('quantity'), created_order.get('amount'))
@@ -103,6 +102,8 @@ class OrderAdministrator(object):
 				# if it's a change in item prompt the customer to make a new order
 				if item.id != order.item.id:
 					return {'code': '400', 'message': 'Please make a new order this change is forbidden'}
+			else:
+				item = order.item
 			print(item)
 
 			if quantity:
@@ -196,9 +197,9 @@ class OrderAdministrator(object):
 		try:
 			order = OrderService().filter(pk = order).first()
 			if order is None:
-				return {"code": "800.400.002"}
+				return {"code": "400"}
 			if order.delete():
-				return {'code': '800.200.001', 'Message': 'Order deleted successfully'}
+				return {'code': '200', 'Message': 'Order deleted successfully'}
 		except Exception as ex:
 			lgr.exception("Delete order exception %s" % ex)
 		return {"code": "400"}

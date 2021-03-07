@@ -10,7 +10,7 @@ class Item(models.Model):
 	name = models.CharField(max_length=100, null = True, help_text = "Name of the Item")
 	description = models.CharField(max_length=1000, null = True, help_text = "Description of the Item")
 	total = models.IntegerField(null = True, help_text = "Total amount of the item available")
-	price = models.IntegerField(null = True,help_text = "Price of the Item")
+	price = models.IntegerField(null = True, help_text = "Price of the Item")
 	date_created = models.DateTimeField(auto_now_add=True)
 	date_modified = models.DateTimeField(auto_now = True)
 

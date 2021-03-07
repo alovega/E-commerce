@@ -103,5 +103,3 @@ after creating a super user and running the server login to the admin and create
     
  ## Authors
  [Alwavega Kevin](https://github.com/alovega)
- 
-
