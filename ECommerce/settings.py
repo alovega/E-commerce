@@ -139,6 +139,9 @@ LOGIN_URL = '/accounts/login/'
 OIDC_USERINFO = 'ECommerce.oidc_provider_settings.userinfo'
 OIDC_GRANT_TYPE_PASSWORD_ENABLE = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')# location where you will store your static files
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')
+]
 
 
 LOGGING = {
